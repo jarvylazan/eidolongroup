@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaJam Coffee Bar Jobs</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Warframe's premier eidolon hunting group" />
+    <link href="css/javajam.css" rel="stylesheet" />
+    <script>
+      function validateForm() {
+        var userName = document.getElementById('myName').value;
+        var userAge = parseInt(document.getElementById('userAge').value, 10);
+        if (userName.trim() === "") {
+          alert("Name field cannot be empty.");
+          return false;
+        }
+        if (isNaN(userAge) || userAge < 18) {
+          alert("Age is less than 18. You are not an adult.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">Warframe Hunter's Group</a></h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guide.html">Hunting Guide</a></li>
+          <li><a href="join.html">Join Us</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div id="herojobs"></div>
+        <h2>Join our Ever-Growing Team!</h2>
+        <form method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm();">
+          <label for="myName">Name:</label>
+          <input type="text" id="myName" name="myName" required />
+
+          <label for="myEmail">E-mail:</label>
+          <input type="email" id="myEmail" name="myEmail" required />
+
+          <label for="userAge">Age: (We are an 18+ only group)</label>
+          <input type="text" name="userAge" id="userAge" />
+
+          <label for="myExperience">Experience:</label>
+          <textarea id="myExperience" name="myExperience" rows="2" cols="20" required></textarea>
+
+          <input type="submit" value="Apply Now" id="mySubmit" />
+        </form>
+      </main>
+      <footer>
+        Copyright &copy; 2024 Jarvy Lazan
+        <br />
+        <a href="mailto:jarvy@lazan.com">jarvy@lazan.com</a>
+      </footer>
+    </div>
+  </body>
+</html>
