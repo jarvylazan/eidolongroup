@@ -84,6 +84,17 @@ nav li {
   padding: 0.5em 1em;
   width: 100%;
 }
+.fotorama__img {
+  width: 300px;
+  max-width: 80vw;
+  height: 200px;
+  object-fit: cover;
+}
+.fotorama {
+  max-width: 80vw;
+  height: 300px;
+}
+
 main {
   background: linear-gradient(to bottom, blue, black);
   display: block;
